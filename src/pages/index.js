@@ -3,6 +3,7 @@ import Link from "next/link";
 import LayoutHome from "./components/LayoutHome";
 import localFont from "next/font/local";
 import InfoCard from "./components/InfoCard";
+import MenuItem from "./components/MenuItem";
 import InfoCardSmall from "./components/InfoCardSmall";
 import HorizontalCTA from "./components/HorizontalCTA";
 import { useMediaQuery } from "react-responsive";
@@ -27,6 +28,29 @@ export default function Home() {
             </p>
             <div className="text-left">
               <h2>Why Choose Our Organic Sourdough Bread</h2>
+              <ul>
+                <li><strong>Organic Ingredients:</strong> Free from harmful additives and chemicals.</li>
+                <li><strong>Timeless Methods:</strong> Slow fermentation for superior flavor and nutrition.</li>
+                <li><strong>Sustainably Crafted:</strong> Supporting the planet with every loaf.</li>
+              </ul>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                <MenuItem 
+                  imgSrc="/images/salt.png" 
+                  productName="Delicious Burger" 
+                  description="A juicy burger with fresh lettuce, tomatoes, and cheese."
+                />
+                <MenuItem 
+                  imgSrc="/images/salt.png" 
+                  productName="Crispy Fries" 
+                  description="Golden, crispy french fries cooked to perfection."
+                />
+                <MenuItem 
+                  imgSrc="/images/salt.png" 
+                  productName="Refreshing Soda" 
+                  description="A cold and fizzy soda to quench your thirst."
+                />
+              </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                 <InfoCard
                   imgSrc="/images/flour_card.png"
@@ -52,11 +76,7 @@ export default function Home() {
               <br />
               <br />
               <h3>Bread Made with Integrity</h3>
-              <ul>
-                <li><strong>Organic Ingredients:</strong> Free from harmful additives and chemicals.</li>
-                <li><strong>Timeless Methods:</strong> Slow fermentation for superior flavor and nutrition.</li>
-                <li><strong>Sustainably Crafted:</strong> Supporting the planet with every loaf.</li>
-              </ul>
+
             </div>
 
 
