@@ -4,7 +4,7 @@ export default function MenuItem({ imgSrc, productName, description }) {
     const safeDescription = description || "Default product description.";
   
     return (
-      <div className="menu-item flex items-center border-b border-gray-200 py-4">
+      <div className="menu-item flex flex-col sm:flex-row items-start sm:items-center border-b border-gray-200 py-4">
         {/* Left Section: Product Name and Description */}
         <div className="flex-grow">
           <h2 className="text-lg font-semibold text-gray-900">
@@ -14,11 +14,11 @@ export default function MenuItem({ imgSrc, productName, description }) {
         </div>
   
         {/* Right Section: Product Image */}
-        <div className="ml-4">
+        <div className="mt-4 sm:mt-0 sm:ml-4">
           <img
             src={safeImgSrc}
             alt={safeProductName}
-            className="w-24 h-24 object-cover rounded-md"
+            className="w-72 h-48 object-cover rounded-md" // Adjusted size
           />
         </div>
       </div>
