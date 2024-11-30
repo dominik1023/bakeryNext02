@@ -37,18 +37,24 @@ export default function Home() {
                 <MenuItem 
                   imgSrc="/images/salt.png" 
                   productName="Standard Sourdough Bread" 
-                  description="A juicy burger with fresh lettuce, tomatoes, and cheese."
+                  description="A taste of the simple life - a loaf of sourdough bread made with only the finest of ingredients. Organic flour, celtic salt and filtered water. Baked from a mature, organic starter. Hand-made using traditional methods by an expert baker."
                   price="$10.00"
                 />
                 <MenuItem 
                   imgSrc="/images/salt.png" 
-                  productName="Crispy Fries" 
+                  productName="Sourdough Bread with Poppy Seeds" 
                   description="Golden, crispy french fries cooked to perfection."
                   price="$10.00"
                 />
                 <MenuItem 
                   imgSrc="/images/salt.png" 
-                  productName="Refreshing Soda" 
+                  productName="Sourdough Bread with Sunflower Seeds" 
+                  description="Golden, crispy french fries cooked to perfection."
+                  price="$10.00"
+                />
+                <MenuItem 
+                  imgSrc="/images/salt.png" 
+                  productName="Butter Bread" 
                   description="A cold and fizzy soda to quench your thirst."
                   price="$10.00"
                 />
