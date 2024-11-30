@@ -38,7 +38,7 @@ export default function MenuItem({ price, imgSrc, productName, description }) {
             className="object-cover rounded-md"
             style={{
               width: "97.2%", // 72px (original width) + 35%
-              height: "52.8%", // 48px (original height) + 10%
+              height: "25.8%", // 48px (original height) + 10%
             }}
           />
         </div>
