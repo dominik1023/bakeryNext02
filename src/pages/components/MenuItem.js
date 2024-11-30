@@ -36,6 +36,9 @@ export default function MenuItem({ price, imgSrc, productName, description }) {
             src={safeImgSrc}
             alt={safeProductName}
             className="w-72 h-48 object-cover rounded-md" // Adjusted size
+            style={{
+                width: "28rem"
+            }}
           />
         </div>
       </div>
