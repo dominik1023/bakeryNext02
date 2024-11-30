@@ -50,7 +50,7 @@ export default function Home() {
                   description="A cold and fizzy soda to quench your thirst."
                 />
               </div>
-
+              <br /><br />
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                 <InfoCard
                   imgSrc="/images/flour_card.png"
