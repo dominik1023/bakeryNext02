@@ -33,7 +33,7 @@ export default function Home() {
                 <li><strong>Timeless Methods:</strong> Slow fermentation for superior flavor and nutrition.</li>
                 <li><strong>Sustainably Crafted:</strong> Supporting the planet with every loaf.</li>
               </ul>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+              <div className="grid grid-cols-1 gap-6">
                 <MenuItem 
                   imgSrc="/images/salt.png" 
                   productName="Delicious Burger" 
