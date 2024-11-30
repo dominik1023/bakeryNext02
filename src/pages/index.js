@@ -36,18 +36,21 @@ export default function Home() {
               <div className="grid grid-cols-1 gap-6">
                 <MenuItem 
                   imgSrc="/images/salt.png" 
-                  productName="Delicious Burger" 
+                  productName="Standard Sourdough Bread" 
                   description="A juicy burger with fresh lettuce, tomatoes, and cheese."
+                  price="$10.00"
                 />
                 <MenuItem 
                   imgSrc="/images/salt.png" 
                   productName="Crispy Fries" 
                   description="Golden, crispy french fries cooked to perfection."
+                  price="$10.00"
                 />
                 <MenuItem 
                   imgSrc="/images/salt.png" 
                   productName="Refreshing Soda" 
                   description="A cold and fizzy soda to quench your thirst."
+                  price="$10.00"
                 />
               </div>
               <br /><br />

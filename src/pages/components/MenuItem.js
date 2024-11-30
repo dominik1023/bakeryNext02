@@ -1,7 +1,8 @@
-export default function MenuItem({ imgSrc, productName, description }) {
+export default function MenuItem({ price, imgSrc, productName, description }) {
     const safeImgSrc = imgSrc || "/placeholder.png"; // Fallback image
     const safeProductName = productName || "Default Product";
     const safeDescription = description || "Default product description.";
+    const safePrice = price || "$10.00"
   
     return (
       <div className="menu-item flex flex-col sm:flex-row items-start sm:items-center border-b border-gray-200 py-4"
@@ -15,7 +16,7 @@ export default function MenuItem({ imgSrc, productName, description }) {
                     fontSize: "1.75rem"
                 }}
             >
-            {safeProductName}
+                {safePrice} {safeProductName}
             </h2>
             <p className="text-sm text-gray-700">{safeDescription}</p>
         </div>
