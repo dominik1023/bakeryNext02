@@ -5,13 +5,11 @@ export default function MenuItem({
   imgSrc,
   productName,
   description,
-  images = [], // Default to an empty array
 }) {
   const safeImgSrc = imgSrc || "/placeholder.png"; // Fallback image
   const safeProductName = productName || "Default Product";
   const safeDescription = description || "Default product description.";
   const safePrice = price || "$10.00";
-  const safeImages = Array.isArray(images) ? images : []; // Ensure it's always an array
 
   return (
     <>
@@ -58,22 +56,19 @@ export default function MenuItem({
       </div>
 
       {/* Lightbox */}
-      {safeImages.length > 0 &&
-        safeImages.map((image, index) => (
-          <div key={index} id={`lightbox-${index}`} className="lightbox">
-            <a href="#" className="lightbox-close">
-              &times;
-            </a>
-            <Image
-              src={image.src || safeImgSrc}
-              alt={image.alt || safeProductName}
-              width={1920}
-              height={1080}
-              className="lightbox-image"
-              style={{ maxWidth: "90%", maxHeight: "90%" }}
-            />
-          </div>
-        ))}
+      <div id="lightbox" className="lightbox">
+        <a href="#" className="lightbox-close">
+          &times;
+        </a>
+        <Image
+          src={safeImgSrc}
+          alt={safeProductName}
+          width={1920}
+          height={1080}
+          className="lightbox-image"
+          style={{ maxWidth: "90%", maxHeight: "90%" }}
+        />
+      </div>
 
       <style jsx>{`
         .menu-item {

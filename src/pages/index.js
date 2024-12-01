@@ -40,15 +40,7 @@ export default function Home() {
                 <li><strong>Sustainably Crafted:</strong> Supporting the planet with every loaf.</li>
               </ul>
               <div className="grid grid-cols-1 gap-6">
-                <MenuItem
-                  price="$12.99"
-                  imgSrc="/images/salt.png"
-                  productName="Sample Dish"
-                  description="A delicious example dish."
-                  images={[
-                    { src: "/images/salt.png", alt: "Example 1" },
-                  ]}
-                />
+
                 <MenuItem 
                   imgSrc="/images/salt.png" 
                   productName="Standard Sourdough Bread" 
