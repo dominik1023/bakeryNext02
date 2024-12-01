@@ -1,72 +1,100 @@
-export default function HorizontalCTA({
-  headline,
-  paragraph,
-  ctaText,
-  ctaLink,
-  reverseColors = false,
-}) {
+export default function ImageGallery({ images }) {
   return (
     <>
-      <div className={`cta-container ${reverseColors ? "reverse-colors" : ""}`}>
-        <div className="text-content">
-          <h2 className="headline">{headline}</h2>
-          {paragraph && <p className="paragraph">{paragraph}</p>}
+      <div className="gallery-container">
+        <div className="gallery-grid">
+          {images.map((image, index) => (
+            <a key={index} href={`#lightbox-${index}`} className="gallery-item">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="gallery-thumbnail"
+              />
+            </a>
+          ))}
         </div>
-        <a href={ctaLink} className="cta-button">
-          {ctaText}
-        </a>
+
+        {images.map((image, index) => (
+          <div key={index} id={`lightbox-${index}`} className="lightbox">
+            <a href="#" className="lightbox-close">
+              &times;
+            </a>
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="lightbox-image"
+            />
+          </div>
+        ))}
       </div>
 
       <style jsx>{`
-        .cta-container {
+        .gallery-container {
+          width: 100%;
+          padding: 20px;
+        }
+
+        .gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          gap: 10px;
+        }
+
+        .gallery-item {
+          display: block;
+          cursor: pointer;
+        }
+
+        .gallery-thumbnail {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          transition: transform 0.2s ease-in-out;
+        }
+
+        .gallery-thumbnail:hover {
+          transform: scale(1.05);
+        }
+
+        .lightbox {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.8);
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          width: 100%; /* Stretch across content width */
-          padding: 20px 40px;
+          justify-content: center;
+          z-index: 1000;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .lightbox:target {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .lightbox-image {
+          max-width: 90%;
+          max-height: 90%;
           border-radius: 8px;
-          background-color: #f9f9f9;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          margin-bottom: 20px; /* Adds space between content and CTA */
         }
 
-        .reverse-colors {
-          background-color: #0070f3;
-          color: white;
-        }
-
-        .headline {
+        .lightbox-close {
+          position: absolute;
+          top: 20px;
+          right: 20px;
           font-size: 2rem;
-          font-weight: bold;
-          margin-right: 20px;
-        }
-
-        .paragraph {
-          font-size: 1.2rem;
-          margin: 0;
-        }
-
-        .cta-button {
-          background-color: #0070f3;
           color: white;
-          padding: 10px 20px;
           text-decoration: none;
-          border-radius: 4px;
-          font-weight: bold;
-          transition: background-color 0.3s ease;
+          cursor: pointer;
         }
 
-        .reverse-colors .cta-button {
-          background-color: white;
-          color: #0070f3;
-        }
-
-        .cta-button:hover {
-          background-color: #005bb5;
-        }
-
-        .reverse-colors .cta-button:hover {
-          background-color: #e5e5e5;
+        .lightbox-close:hover {
+          color: #ffdddd;
         }
       `}</style>
     </>
