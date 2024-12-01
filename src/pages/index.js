@@ -6,13 +6,20 @@ import InfoCard from "./components/InfoCard";
 import MenuItem from "./components/MenuItem";
 import InfoCardSmall from "./components/InfoCardSmall";
 import HorizontalCTA from "./components/HorizontalCTA";
+import ImageGallery from './components/ImageGallery';
+
 import { useMediaQuery } from "react-responsive";
 
 import SEO from "./components/SEO";
 
 export default function Home() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-
+  const images = [
+    { src: '/images/salt.png', alt: 'Image 1' },
+    { src: '/images/salt.png', alt: 'Image 2' },
+    { src: '/images/salt.png', alt: 'Image 3' },
+    { src: '/images/salt.png', alt: 'Image 4' },
+  ];
   return (
     <>
       <SEO
