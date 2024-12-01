@@ -6,12 +6,12 @@ import SEO from "./components/SEO";
 // import CaseStudyList from "./components/CaseStudyList";
 // import caseStudyData from "./components/data/caseStudies.json";
 export default function Gallery() {
-  const images = [
-    { src: '/images/salt.png', alt: 'Image 1' },
-    { src: '/images/salt.png', alt: 'Image 2' },
-    { src: '/images/salt.png', alt: 'Image 3' },
-    { src: '/images/salt.png', alt: 'Image 4' },
-  ];
+  // const images = [
+  //   { src: '/images/salt.png', alt: 'Image 1' },
+  //   { src: '/images/salt.png', alt: 'Image 2' },
+  //   { src: '/images/salt.png', alt: 'Image 3' },
+  //   { src: '/images/salt.png', alt: 'Image 4' },
+  // ];
   return (
     <>
       <SEO
@@ -29,7 +29,18 @@ export default function Gallery() {
         <h2 className="text-3xl font-bold">
           Image gallery
         </h2>
+        <ImageGallery
+          images={[
+            { src: "/images/salt.png", alt: "Image 1" },
+            { src: "/images/salt.png", alt: "Image 2" },
+            { src: "/images/salt.png", alt: "Image 3" },
+          ]}
+        />
+
+  {/*
         <ImageGallery images={images} />
+
+*/}
       </LayoutInterior>
     </>
   );

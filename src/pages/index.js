@@ -5,7 +5,6 @@ import localFont from "next/font/local";
 import InfoCard from "./components/InfoCard";
 import MenuItem from "./components/MenuItem";
 import InfoCardSmall from "./components/InfoCardSmall";
-import HorizontalCTA from "./components/HorizontalCTA";
 import ImageGallery from './components/ImageGallery';
 
 import { useMediaQuery } from "react-responsive";
@@ -41,6 +40,15 @@ export default function Home() {
                 <li><strong>Sustainably Crafted:</strong> Supporting the planet with every loaf.</li>
               </ul>
               <div className="grid grid-cols-1 gap-6">
+                <MenuItem
+                  price="$12.99"
+                  imgSrc="/images/salt.png"
+                  productName="Sample Dish"
+                  description="A delicious example dish."
+                  images={[
+                    { src: "/images/salt.png", alt: "Example 1" },
+                  ]}
+                />
                 <MenuItem 
                   imgSrc="/images/salt.png" 
                   productName="Standard Sourdough Bread" 
@@ -99,13 +107,6 @@ export default function Home() {
 
 
           </div>
-          {/* <HorizontalCTA
-            headline="Find Your Solution With Us..."
-            paragraph="...see what we offer"
-            ctaText="Get Started"
-            ctaLink="/services"
-            reverseColors={false}
-          /> */}
         </main>
       </LayoutHome>
       <style jsx>{`
