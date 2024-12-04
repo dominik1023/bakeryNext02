@@ -48,19 +48,19 @@ export default function Home() {
                   price="$10.00"
                 />
                 <MenuItem 
-                  imgSrc="/images/salt.png" 
+                  imgSrc="/images/sourdough_poppy01.jpg" 
                   productName="Sourdough Bread with Poppy Seeds" 
                   description="Golden, crispy french fries cooked to perfection."
                   price="$10.00"
                 />
                 <MenuItem 
-                  imgSrc="/images/salt.png" 
+                  imgSrc="/images/sourdough_butterbread01.jpg" 
                   productName="Sourdough Bread with Sunflower Seeds" 
                   description="Golden, crispy french fries cooked to perfection."
                   price="$10.00"
                 />
                 <MenuItem 
-                  imgSrc="/images/salt.png" 
+                  imgSrc="/images/sourdough_butterbread01.jpg" 
                   productName="Butter Bread" 
                   description="A cold and fizzy soda to quench your thirst."
                   price="$10.00"
