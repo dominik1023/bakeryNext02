@@ -42,7 +42,7 @@ export default function Home() {
               <div className="grid grid-cols-1 gap-6">
 
                 <MenuItem 
-                  imgSrc="/images/salt.png" 
+                  imgSrc="/images/standard_sourdough01.jpg" 
                   productName="Standard Sourdough Bread" 
                   description="A taste of the simple life - a loaf of sourdough bread made with only the finest of ingredients. Organic flour, celtic salt and filtered water. Baked from a mature, organic starter. Hand-made using traditional methods by an expert baker."
                   price="$10.00"
@@ -53,12 +53,14 @@ export default function Home() {
                   description="Golden, crispy french fries cooked to perfection."
                   price="$10.00"
                 />
+                {/* 
                 <MenuItem 
                   imgSrc="/images/sourdough_butterbread01.jpg" 
                   productName="Sourdough Bread with Sunflower Seeds" 
                   description="Golden, crispy french fries cooked to perfection."
                   price="$10.00"
                 />
+                */}
                 <MenuItem 
                   imgSrc="/images/sourdough_butterbread01.jpg" 
                   productName="Butter Bread" 
