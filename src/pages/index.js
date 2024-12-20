@@ -22,9 +22,9 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="ADA Compliance for Houston Businesses | Accessibility Experts"
-        description="Get ADA compliant with our Houston website accessibility solutions. We provide scanning, reporting, and WCAG 2.1 remediation to avoid costly lawsuits."
-        keywords="Houston ADA compliance, website accessibility, WCAG 2.1 standards, ADA website audit Houston, accessibility solutions, ADA remediation, avoid lawsuits Houston, ADA compliance services"
+        title="White House Bakery of Baytown"
+        description=""
+        keywords=""
       />
       <LayoutHome>
         <main className="flex flex-col items-center sm:items-start">
