@@ -13,12 +13,7 @@ import SEO from "./components/SEO";
 
 export default function Home() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const images = [
-    { src: '/images/salt.png', alt: 'Image 1' },
-    { src: '/images/salt.png', alt: 'Image 2' },
-    { src: '/images/salt.png', alt: 'Image 3' },
-    { src: '/images/salt.png', alt: 'Image 4' },
-  ];
+
   return (
     <>
       <SEO
@@ -30,8 +25,11 @@ export default function Home() {
         <main className="flex flex-col items-center sm:items-start">
           <div className="container max-w-screen-xl mx-auto px-4 hero-content text-center">
             <h1 className="text-4xl font-bold text-center text-gray-900 mt-8">Sourdough Baking - The True Taste of Tradition</h1>
-            <p>Crafted with care, our organic sourdough bread brings together time-honored methods and the finest natural ingredients. Taste the difference that Celtic salt, filtered water, and organic flour make in every bite.
+            <p><strong>WE ARE AN ALL-ORGANIC, ARTISAN BREAD BAKERY.</strong><br />All bread is crafted with care, our organic sourdough bread brings together time-honored methods and the finest natural ingredients. Taste the difference that <Link href="/ingredients-celtic-salt">Celtic salt</Link>, <Link href="/ingredients-filtered-water">filtered water</Link>, and <Link href="/ingredients-organic-flour">organic flour</Link> make in every bite.
             </p>
+
+            <h2>How to Order</h2>
+              <p>Text your order to: 888.888.8888. We&apos;ll text you the pick up address, when your order is ready. Please allow 48 hours to prepare and bake the bread.</p>
             <div className="text-left">
               <h2>Why Choose Our Organic Sourdough Bread</h2>
               <ul>
@@ -39,20 +37,31 @@ export default function Home() {
                 <li><strong>Timeless Methods:</strong> Slow fermentation for superior flavor and nutrition.</li>
                 <li><strong>Sustainably Crafted:</strong> Supporting the planet with every loaf.</li>
               </ul>
+              
               <div className="grid grid-cols-1 gap-6">
 
-                <MenuItem 
-                  imgSrc="/images/standard_sourdough01.jpg" 
-                  productName="Standard Sourdough Bread" 
-                  description="A taste of the simple life - a loaf of sourdough bread made with only the finest of ingredients. Organic flour, celtic salt and filtered water. Baked from a mature, organic starter. Hand-made using traditional methods by an expert baker."
-                  price="$10.00"
-                />
-                <MenuItem 
-                  imgSrc="/images/sourdough_poppy01.jpg" 
-                  productName="Sourdough Bread with Poppy Seeds" 
-                  description="Golden, crispy french fries cooked to perfection."
-                  price="$10.00"
-                />
+              <MenuItem
+              id="standard-sourdough"
+              imgSrc="/images/standard_sourdough01.jpg"
+              productName="Standard Sourdough Bread"
+              description="A taste of the simple life - a loaf of sourdough bread made with only the finest of ingredients. Organic flour, celtic salt and filtered water. Baked from a mature, organic starter. Hand-made using traditional methods by an expert baker."
+              price="$10.00"
+            />
+            <MenuItem
+              id="sourdough-poppy"
+              imgSrc="/images/sourdough_poppy01.jpg"
+              productName="Sourdough Bread with Poppy Seeds"
+              description="Golden, crispy french fries cooked to perfection."
+              price="$10.00"
+            />
+            <MenuItem
+              id="butter-bread"
+              imgSrc="/images/sourdough_butterbread01.jpg"
+              productName="Butter Bread"
+              description="A cold and fizzy soda to quench your thirst."
+              price="$10.00"
+            />
+            
                 {/* 
                 <MenuItem 
                   imgSrc="/images/sourdough_butterbread01.jpg" 
@@ -61,12 +70,7 @@ export default function Home() {
                   price="$10.00"
                 />
                 */}
-                <MenuItem 
-                  imgSrc="/images/sourdough_butterbread01.jpg" 
-                  productName="Butter Bread" 
-                  description="A cold and fizzy soda to quench your thirst."
-                  price="$10.00"
-                />
+
               </div>
               <br /><br />
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">

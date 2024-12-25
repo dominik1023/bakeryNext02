@@ -5,6 +5,7 @@ export default function MenuItem({
   imgSrc,
   productName,
   description,
+  id, // Add a unique id for each menu item
 }) {
   const safeImgSrc = imgSrc || "/placeholder.png"; // Fallback image
   const safeProductName = productName || "Default Product";
@@ -40,7 +41,7 @@ export default function MenuItem({
 
         {/* Image section */}
         <div className="mt-4 sm:mt-0 sm:ml-4">
-          <a href="#lightbox" className="menu-item-image-link">
+          <a href={`#lightbox-${id}`} className="menu-item-image-link">
             <Image
               src={safeImgSrc}
               alt={safeProductName}
@@ -56,7 +57,7 @@ export default function MenuItem({
       </div>
 
       {/* Lightbox */}
-      <div id="lightbox" className="lightbox">
+      <div id={`lightbox-${id}`} className="lightbox">
         <a href="#" className="lightbox-close">
           &times;
         </a>
