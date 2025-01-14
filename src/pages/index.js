@@ -28,8 +28,11 @@ export default function Home() {
             <p><strong>WE ARE AN ALL-ORGANIC, ARTISAN BREAD BAKERY.</strong><br />All bread is crafted with care, our organic sourdough bread brings together time-honored methods and the finest natural ingredients. Taste the difference that <Link href="/ingredients-celtic-salt">Celtic salt</Link>, <Link href="/ingredients-filtered-water">filtered water</Link>, and <Link href="/ingredients-organic-flour">organic flour</Link> make in every bite.
             </p>
 
-            <h2>How to Order</h2>
-              <p>Text your order to: 888.888.8888. We&apos;ll text you the pick up address, when your order is ready. Please allow 48 hours to prepare and bake the bread.</p>
+            <h2 style={{
+              fontSize: "22px"
+            }}>How to Order</h2>
+              <p>Text your order to: 832.323.3070 (preferably) or 224.392.6495. We&apos;ll text you the pick up address, when your order is ready. <br /><strong>Please allow 48 hours to prepare and bake the bread</strong>.</p>
+              <p><strong>ALL BREAD IS MADE TO ORDER, NO SURPLUS LOAVES LEFT</strong>.</p>
             <div className="text-left">
               <h2>Why Choose Our Organic Sourdough Bread</h2>
               <ul>
@@ -40,28 +43,50 @@ export default function Home() {
               
               <div className="grid grid-cols-1 gap-6">
 
-              <MenuItem
-              id="standard-sourdough"
-              imgSrc="/images/standard_sourdough01.jpg"
-              productName="Standard Sourdough Bread"
-              description="A taste of the simple life - a loaf of sourdough bread made with only the finest of ingredients. Organic flour, celtic salt and filtered water. Baked from a mature, organic starter. Hand-made using traditional methods by an expert baker."
-              price="$10.00"
-            />
-            <MenuItem
-              id="sourdough-poppy"
-              imgSrc="/images/sourdough_poppy01.jpg"
-              productName="Sourdough Bread with Poppy Seeds"
-              description="Golden, crispy french fries cooked to perfection."
-              price="$10.00"
-            />
-            <MenuItem
-              id="butter-bread"
-              imgSrc="/images/sourdough_butterbread01.jpg"
-              productName="Butter Bread"
-              description="A cold and fizzy soda to quench your thirst."
-              price="$10.00"
-            />
-            
+                <MenuItem
+                  id="standard-sourdough"
+                  imgSrc="/images/standard_sourdough01.jpg"
+                  productName="Standard Sourdough Bread"
+                  description="A taste of the simple life - a loaf of sourdough bread made with only the finest of ingredients. Organic flour, celtic salt and filtered water. Baked from a mature, organic starter. Hand-made using traditional methods by an expert baker."
+                  price="$10.00"
+                  weight="2.2lbs"
+                />
+                <MenuItem
+                  id="sourdough-poppy"
+                  imgSrc="/images/sourdough_poppy01.jpg"
+                  productName="Sourdough Bread with Poppy Seeds"
+                  description="A loaf covered with poppyseeds on the outside, enhancing the sourdough flavor. Baked from a mature starter. All organic."
+                  price="$12.00"
+                  weight="2.2lbs"
+
+                />
+                <MenuItem
+                  id="butter-bread"
+                  imgSrc="/images/sourdough_butterbread01.jpg"
+                  productName="Butter Bread"
+                  description="Sandwich bread. A buttery loaf treated with grass-fed cow butter after baking, making the crust softer and delicious."
+                  price="$12.00"
+                  weight="2.2lbs"
+
+                />
+                <MenuItem
+                  id="sunflower-bread"
+                  imgSrc="/images/sunflower_bread.jpg"
+                  productName="Sunflower Bread"
+                  description="A delicious loaf permeated by sunflower seeds. Baked like regular sourdough bread - with crisp, crunchy crust. Baked with organic sunflower seeds."
+                  price="$12.00"
+                  weight="2.2lbs"
+
+                />
+                <MenuItem
+                  id="garlic-bread"
+                  imgSrc="/images/garlic_bread.jpg"
+                  productName="Roasted Garlic Bread"
+                  description="A wonderful and crunchy bread with the addition of 3 heads of roasted garlic. Garlic is roasted using cold-pressed avocado oil for best quality."
+                  price="$12.00"
+                  weight="2.2lbs"
+
+                />
                 {/* 
                 <MenuItem 
                   imgSrc="/images/sourdough_butterbread01.jpg" 
@@ -97,7 +122,6 @@ export default function Home() {
               </div>
               <br />
               <br />
-              <h3>Bread Made with Integrity</h3>
 
             </div>
 

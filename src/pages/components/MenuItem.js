@@ -4,6 +4,7 @@ export default function MenuItem({
   price,
   imgSrc,
   productName,
+  weight,
   description,
   id, // Add a unique id for each menu item
 }) {
@@ -11,6 +12,7 @@ export default function MenuItem({
   const safeProductName = productName || "Default Product";
   const safeDescription = description || "Default product description.";
   const safePrice = price || "$10.00";
+  const safeWeight = weight || "2.2lbs"
 
   return (
     <>
@@ -36,7 +38,8 @@ export default function MenuItem({
           >
             {safePrice} {safeProductName}
           </h2>
-          <p className="text-sm text-gray-700">{safeDescription}</p>
+          <p className="text-md text-gray-700">{safeDescription}</p>
+          <p className="text-md text-gray-700">Weight: at least {safeWeight}</p>
         </div>
 
         {/* Image section */}

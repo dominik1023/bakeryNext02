@@ -36,10 +36,6 @@
     {
       "name": "Gallery",
       "path": "/gallery"
-    },
-    {
-      "name": "Contact Us",
-      "path": "/contact-us"
     }
   ]
 }
